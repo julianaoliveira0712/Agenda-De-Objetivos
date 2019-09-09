@@ -1,5 +1,6 @@
 package br.com.bandtec.AgendaDeObjetivos.controller;
 
+import br.com.bandtec.AgendaDeObjetivos.modelos.Credenciais;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

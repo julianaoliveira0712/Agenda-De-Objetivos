@@ -1,9 +1,9 @@
 package br.com.bandtec.AgendaDeObjetivos.controller;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
+import br.com.bandtec.AgendaDeObjetivos.modelos.Usuario;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

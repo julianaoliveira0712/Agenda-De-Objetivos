@@ -1,4 +1,4 @@
-package br.com.bandtec.AgendaDeObjetivos.controller;
+package br.com.bandtec.AgendaDeObjetivos.modelos;
 
 public class Credenciais {
 	
