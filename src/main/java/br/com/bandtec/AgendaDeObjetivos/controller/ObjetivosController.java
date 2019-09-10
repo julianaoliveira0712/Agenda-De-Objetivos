@@ -21,7 +21,7 @@ public class ObjetivosController {
 
     @PostMapping("/objetivos")
     public ResponseEntity<String> inserirObjetivo(@RequestBody Objetivo objetivo){
-        todosObjetivos.salvar(objetivo);
+        todosObjetivos.save(objetivo);
         return  ResponseEntity.ok("Sucesso");
     }
 
@@ -30,9 +30,11 @@ public class ObjetivosController {
         LocalDate localDate = LocalDate.parse(data);
         List<Objetivo> encontrados = todosObjetivos.ate(localDate);
         if(encontrados.isEmpty()){
-            return  ResponseEntity.status(201).body(new ArrayList<Objetivo>());
+            return  ResponseEntity.status(204).body(new ArrayList<Objetivo>());
         }else{
             return ResponseEntity.ok(encontrados);
         }
     }
+
+
 }
