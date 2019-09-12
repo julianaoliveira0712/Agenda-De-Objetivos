@@ -2,6 +2,7 @@ package br.com.bandtec.AgendaDeObjetivos.controller;
 
 import static org.junit.Assert.assertEquals;
 
+import br.com.bandtec.AgendaDeObjetivos.modelos.Credenciais;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class LoginControllerTest {
 	
 	@Test
 	public void loginComSucesso() {		
-		ResponseEntity<String> resposta = controller.validarLogin(new Credenciais("teste", "teste"));		
+		ResponseEntity<String> resposta = controller.validarLogin(new Credenciais("teste", "teste"));
 		assertEquals(HttpStatus.OK, resposta.getStatusCode());
 		assertEquals("Sucesso", resposta.getBody());
 	}

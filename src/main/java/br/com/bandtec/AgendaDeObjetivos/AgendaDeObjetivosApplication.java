@@ -10,5 +10,4 @@ public class AgendaDeObjetivosApplication {
 		SpringApplication.run(AgendaDeObjetivosApplication.class, args);
 		System.out.println("oi");
 	}
-
 }
