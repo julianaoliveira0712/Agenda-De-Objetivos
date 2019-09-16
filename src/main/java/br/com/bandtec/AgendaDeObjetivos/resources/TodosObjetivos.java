@@ -8,15 +8,18 @@ import java.util.List;
 
 import br.com.bandtec.AgendaDeObjetivos.modelos.Objetivo;
 import com.sun.xml.internal.bind.v2.model.core.ID;
+
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TodosObjetivos extends JpaRepository<Objetivo, Integer> {
+public interface TodosObjetivos extends JpaRepository<Objetivo, Long> {
 
 
-    public void save(Objetivo objetivo);
 
-    public List<Objetivo> ate(LocalDate data);
+    @Query("select o from Objetivo o where o.dataMaximaParaExecucao <= :data")
+    public List<Objetivo> ate(@Param("data") LocalDate data);
 
 }

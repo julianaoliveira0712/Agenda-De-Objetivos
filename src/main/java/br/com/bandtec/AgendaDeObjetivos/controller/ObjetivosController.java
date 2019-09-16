@@ -19,11 +19,11 @@ public class ObjetivosController {
         this.todosObjetivos = todosObjetivos;
     }
 
-    @PostMapping("/objetivos")
-    public ResponseEntity<String> inserirObjetivo(@RequestBody Objetivo objetivo){
-        todosObjetivos.save(objetivo);
-        return  ResponseEntity.ok("Sucesso");
-    }
+//    @PostMapping("/objetivos")
+//    public ResponseEntity<String> inserirObjetivo(@RequestBody Objetivo objetivo){
+//        todosObjetivos.save(objetivo);
+//        return  ResponseEntity.ok("Sucesso");
+//    }
 
     @GetMapping("/objetivos/data/{data}")
     public ResponseEntity<List<Objetivo>> buscarPorData(@PathVariable("data") String data){
