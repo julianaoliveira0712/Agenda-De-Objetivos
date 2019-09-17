@@ -17,8 +17,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TodosObjetivos extends JpaRepository<Objetivo, Long> {
 
-
-
     @Query("select o from Objetivo o where o.dataMaximaParaExecucao <= :data")
     public List<Objetivo> ate(@Param("data") LocalDate data);
 

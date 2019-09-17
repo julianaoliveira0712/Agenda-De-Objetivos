@@ -1,23 +1,33 @@
 package br.com.bandtec.AgendaDeObjetivos.modelos;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "usuarios")
 public class Usuario {
-	
-	private String nome;
-	private Integer idade;
-		
-	public Usuario(String nome, Integer idade) {
-		this.nome = nome;
-		this.idade = idade;
+
+	@Id
+	private long id;
+
+	@JsonProperty
+	private String login;
+
+	@JsonProperty
+	private String senha;
+
+	public Usuario() {}
+
+	public Usuario(long id, String login, String senha) {
+		super();
+		this.id = id;
+		this.login = login;
+		this.senha = senha;
 	}
 
-	public String getNome() {
-		return nome;
-	}
 
-	public Integer getIdade() {
-		return idade;
-	}
-	
-	
-	
+
 }
